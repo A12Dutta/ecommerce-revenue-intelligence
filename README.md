@@ -14,7 +14,7 @@ An end-to-end analytics project analyzing **$14.98M** in tracked revenue across 
 
 ## 📊 Dashboard Overview
 
-![Dashboard Overview](outputs/dashboard_overview.png)
+![Power BI Executive Dashboard](outputs/dashboard_overview.png)
 
 ---
 
