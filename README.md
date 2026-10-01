@@ -33,3 +33,13 @@ An end-to-end analytics project analyzing **$14.98M** in tracked revenue across 
 ├── powerbi/               # Interactive Power BI Dashboard (.pbix)
 ├── documentation/         # Executive Report (PDF)
 └── outputs/               # Dashboard preview images & visualizations
+
+---
+
+## Strategic Business Recommendations
+
+Based on the core SQL and Power BI analytics engine, three primary operational levers have been identified:
+
+1. **Protect VIP Seller Cohort:** The top 5% of sellers generate 53.3% of total GMV. Establish dedicated account management and SLA monitoring to prevent seller churn in this high-concentration segment.
+2. **Optimize Logistics Buffer:** Adjust delivery estimates by calibrating warehouse dispatch buffers to reduce customer expectation gaps without increasing late delivery penalties.
+3. **Targeted Re-Engagement:** Implement automated lifecycle campaigns targeting high-LTV repeat buyer personas based on cohort retention windows.
