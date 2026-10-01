@@ -1,0 +1,12 @@
+# Ignore raw data files
+DATA/
+*.csv
+*.zip
+
+# Ignore system & Python junk
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# Ignore VS Code MySQL session files
+*.session.sql
