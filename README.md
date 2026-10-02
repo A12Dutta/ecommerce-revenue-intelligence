@@ -30,33 +30,32 @@ An end-to-end analytics project analyzing **$14.98M** in tracked revenue across 
 ---
 
 ## 📁 Repository Structure
+```text
 ├── sql/
-│ ├── 01_create_database.sql # Database creation
-│ ├── 02_create_tables.sql # DDL for all 9 source tables
-│ ├── 03_data_quality_verification.sql # Row-count verification across all tables
-│ ├── 04_metric_grain_mapping.sql # Revenue reconciliation across item/payment grain
-│ ├── 05_core_kpi_engine.sql # Core KPIs: orders, revenue, AOV, ARPU
-│ ├── 06_revenue_engine_validation.sql # Payments vs. order-items variance check
-│ ├── 07_logistics_customer_experience.sql# Delivery gap, late-delivery %, review score impact
-│ ├── 08_cohort_construction.sql # Customer acquisition cohort view
-│ ├── 09_cohort_retention_matrix.sql # Month-over-month retention matrix
-│ └── 10_ltv_repeat_behavior.sql # Repeat purchase rate & customer LTV
+│   ├── 01_create_database.sql              # Database creation
+│   ├── 02_create_tables.sql                # DDL for all 9 source tables
+│   ├── 03_data_quality_verification.sql    # Row-count verification across all tables
+│   ├── 04_metric_grain_mapping.sql         # Revenue reconciliation across item/payment grain
+│   ├── 05_core_kpi_engine.sql              # Core KPIs: orders, revenue, AOV, ARPU
+│   ├── 06_revenue_engine_validation.sql    # Payments vs. order-items variance check
+│   ├── 07_logistics_customer_experience.sql # Delivery gap, late-delivery %, review score impact
+│   ├── 08_cohort_construction.sql          # Customer acquisition cohort view
+│   ├── 09_cohort_retention_matrix.sql      # Month-over-month retention matrix
+│   └── 10_ltv_repeat_behavior.sql          # Repeat purchase rate & customer LTV
 ├── python/
-│ ├── 01_inspect_csvs.py # Source file inspection
-│ ├── 02_ingest_data.py # CSV → MySQL ingestion
-│ ├── 03_verify_env.py # Environment & connection verification
-│ ├── 04_exploratory_analysis.py # EDA: distributions, trends
-│ ├── 05_investigate_anomalies.py # Structural/business anomaly checks
-│ └── 06_export_powerbi_data.py # Export star-schema tables for Power BI
+│   ├── 01_inspect_csvs.py                  # Source file inspection
+│   ├── 02_ingest_data.py                   # CSV -> MySQL ingestion
+│   ├── 03_verify_env.py                    # Environment & connection verification
+│   ├── 04_exploratory_analysis.py          # EDA: distributions, trends
+│   ├── 05_investigate_anomalies.py         # Structural/business anomaly checks
+│   └── 06_export_powerbi_data.py           # Export star-schema tables for Power BI
 ├── powerbi/
-│ └── Olist_ECommerce_Analytics.pbix # Interactive Power BI dashboard
-├── powerbi_data/ # Star-schema extracts (dim_customers, dim_products,
-│ # dim_sellers, fact_orders, fact_order_items,
-│ # fact_order_payments, fact_order_reviews)
+│   └── Olist_ECommerce_Analytics.pbix      # Interactive Power BI dashboard
+├── powerbi_data/                           # Star-schema extracts
 ├── documentation/
-│ └── Ecommerce_Project_Report.pdf # Full executive report
+│   └── Ecommerce_Project_Report.pdf        # Full executive report
 └── outputs/
-└── dashboard_overview.png # Dashboard preview image
+    └── dashboard_overview.png              # Dashboard preview image
 
 
 ---
