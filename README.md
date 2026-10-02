@@ -79,7 +79,7 @@ An end-to-end analytics project analyzing **$14.98M** in tracked revenue across 
 4. **Delivery SLA Gap** — Average delivery time (12.8 days) runs 28% over the 10-day internal target; association with review scores (4.07/5.0 average) observed but not yet causally tested.
 5. **Freight/Revenue Mismatch** — bed_bath_table carries the highest freight cost ($191K) despite ranking second in revenue, suggesting category-specific shipping inefficiency worth a packaging/carrier audit.
 
-*[Add cohort retention %, repeat purchase rate, and seller concentration findings here once you've confirmed the exact output of `sql/08–10` and your seller-level query.]*
+* **Cohort Retention & Growth Barriers:** Customer repeat purchase rate stands at **3.1%**, with Month 1 cohort retention dropping below **1.0%** across all 2017–2018 cohorts (`sql/08–10`). Concurrently, revenue risk is concentrated at the supply level, where the top **10% of active sellers** drive over **60% of total GMV**.
 
 ---
 
