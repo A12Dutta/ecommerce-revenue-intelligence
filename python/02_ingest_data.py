@@ -2,13 +2,15 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine, text
 
-# 1. Establish MySQL Connection
-# Replace 'your_password' with your actual MySQL root password
-DB_USER = "root"
-DB_PASS = "MySQL18#DA09" 
-DB_HOST = "localhost"
-DB_PORT = "3306"
-DB_NAME = "olist_db"
+# 1. Establish MySQL Connection via Environment Variables
+DB_USER = os.getenv("OLIST_DB_USER", "root")
+DB_PASS = os.getenv("OLIST_DB_PASSWORD")
+DB_HOST = os.getenv("OLIST_DB_HOST", "localhost")
+DB_PORT = os.getenv("OLIST_DB_PORT", "3306")
+DB_NAME = os.getenv("OLIST_DB_NAME", "olist_db")
+
+if not DB_PASS:
+    raise ValueError("Error: OLIST_DB_PASSWORD environment variable is not set.")
 
 engine = create_engine(f"mysql+pymysql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
 
@@ -22,8 +24,8 @@ ingestion_plan = [
     ("olist_products_dataset.csv", "olist_products_dataset", []),
     ("olist_geolocation_dataset.csv", "olist_geolocation_dataset", []),
     ("olist_orders_dataset.csv", "olist_orders_dataset", [
-        "order_purchase_timestamp", "order_approved_at", 
-        "order_delivered_carrier_date", "order_delivered_customer_date", 
+        "order_purchase_timestamp", "order_approved_at",
+        "order_delivered_carrier_date", "order_delivered_customer_date",
         "order_estimated_delivery_date"
     ]),
     ("olist_order_items_dataset.csv", "olist_order_items_dataset", ["shipping_limit_date"]),

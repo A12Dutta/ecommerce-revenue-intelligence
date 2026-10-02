@@ -10,3 +10,4 @@ __pycache__/
 Thumbs.db
 # Ignore VS Code MySQL session files
 *.session.sql
+.vscode/

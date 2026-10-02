@@ -1,9 +1,10 @@
+import os
 import pandas as pd
 from sqlalchemy import create_engine, text
 
 # 1. Establish Database Connection
 DB_USER = "root"
-DB_PASS = "MySQL18#DA09"  # Replace with your actual MySQL password
+DB_PASS = os.getenv("OLIST_DB_PASSWORD")
 DB_HOST = "localhost"
 DB_PORT = "3306"
 DB_NAME = "olist_db"
